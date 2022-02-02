@@ -24,11 +24,11 @@ class App extends Component {
   };
 
     handleClick = element => {
-    this.setState(prevState => ({ [element]: prevState[element] + 1 }));
+      this.setState(prevState => ({ [element]: prevState[element] + 1 }));
   };
 
   render() {
-    let totalNumber = this.state.good + this.state.neutral + this.state.bad;
+    let totalNumberFeedback = this.state.good + this.state.neutral + this.state.bad;
     return (
       <>
         <Section title="Please leave feedback">
@@ -38,7 +38,7 @@ class App extends Component {
           ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
-          {totalNumber !== 0 ? (
+          {totalNumberFeedback !== 0 ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
