@@ -37,8 +37,6 @@ class App extends Component {
   };
 
   render() {
-    // let totalNumberFeedback =
-    //   this.state.good + this.state.neutral + this.state.bad;
     return (
       <>
         <Section title="Please leave feedback">
